@@ -15,7 +15,7 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView) {
-        
+        backgroundColor = UIColor.blue
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
