@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40F625A1F0B829C00004B9A /* MLHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40F62591F0B829C00004B9A /* MLHero.swift */; };
 		B43DDE1D1F072ADC008483CC /* MLMovingGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43DDE1C1F072ADC008483CC /* MLMovingGround.swift */; };
 		B4FB090D1F0717C500909664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB090C1F0717C500909664 /* AppDelegate.swift */; };
 		B4FB09111F0717C500909664 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B4FB09101F0717C500909664 /* Actions.sks */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B40F62591F0B829C00004B9A /* MLHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHero.swift; sourceTree = "<group>"; };
 		B43DDE1C1F072ADC008483CC /* MLMovingGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLMovingGround.swift; sourceTree = "<group>"; };
 		B4FB09091F0717C500909664 /* Salamander Suzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Salamander Suzy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FB090C1F0717C500909664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				B4FB09101F0717C500909664 /* Actions.sks */,
 				B4FB09121F0717C500909664 /* GameScene.swift */,
 				B43DDE1C1F072ADC008483CC /* MLMovingGround.swift */,
+				B40F62591F0B829C00004B9A /* MLHero.swift */,
 				B4FB09141F0717C500909664 /* GameViewController.swift */,
 				B4FB09161F0717C500909664 /* Main.storyboard */,
 				B4FB09191F0717C500909664 /* Assets.xcassets */,
@@ -271,6 +274,7 @@
 			files = (
 				B4FB09131F0717C500909664 /* GameScene.swift in Sources */,
 				B4FB09151F0717C500909664 /* GameViewController.swift in Sources */,
+				B40F625A1F0B829C00004B9A /* MLHero.swift in Sources */,
 				B4FB090D1F0717C500909664 /* AppDelegate.swift in Sources */,
 				B43DDE1D1F072ADC008483CC /* MLMovingGround.swift in Sources */,
 			);
