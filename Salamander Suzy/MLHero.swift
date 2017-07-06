@@ -16,6 +16,8 @@ class MLHero: SKSpriteNode {
     var leftFoot: SKSpriteNode!
     var rightFoot: SKSpriteNode!
     
+    var isUpsideDown = false
+    
     init() {
         let size = CGSize(width:32, height:44)
         super.init(texture: nil, color: UIColor.clear, size: size)
@@ -72,6 +74,22 @@ class MLHero: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func flip() {
+        isUpsideDown = !isUpsideDown
+        
+        var scale: CGFloat!
+        if isUpsideDown {
+            scale = -1.0
+        } else {
+            scale = 1.0
+        }
+        let translate = SKAction.moveBy(x: 0, y: scale * (size.height + kMLGroundHeight), duration: 0.1)
+        let flip = SKAction.scaleY(to: scale, duration: 0.1)
+        
+        run(translate)
+        run(flip)
+    }
+    
     func startRunning() {
         let rotateBack = SKAction.rotate(byAngle: -CGFloat(Double.pi/2.0), duration: 0.1)
         arm.run(rotateBack)
@@ -102,5 +120,7 @@ class MLHero: SKSpriteNode {
     
     func stop() {
         body.removeAllActions()
+        leftFoot.removeAllActions()
+        rightFoot.removeAllActions()
     }
 }
