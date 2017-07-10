@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4038C611F137C8F0069A1BA /* MLPointsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4038C601F137C8F0069A1BA /* MLPointsLabel.swift */; };
 		B40F625A1F0B829C00004B9A /* MLHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40F62591F0B829C00004B9A /* MLHero.swift */; };
 		B43DDE1D1F072ADC008483CC /* MLMovingGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43DDE1C1F072ADC008483CC /* MLMovingGround.swift */; };
 		B45A62221F0C5B3F00BA6DA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A62211F0C5B3E00BA6DA2 /* Constants.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B4038C601F137C8F0069A1BA /* MLPointsLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLPointsLabel.swift; sourceTree = "<group>"; };
 		B40F62591F0B829C00004B9A /* MLHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHero.swift; sourceTree = "<group>"; };
 		B43DDE1C1F072ADC008483CC /* MLMovingGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLMovingGround.swift; sourceTree = "<group>"; };
 		B45A62211F0C5B3E00BA6DA2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				B4FB090C1F0717C500909664 /* AppDelegate.swift */,
 				B4FB09101F0717C500909664 /* Actions.sks */,
 				B4FB09121F0717C500909664 /* GameScene.swift */,
+				B4038C601F137C8F0069A1BA /* MLPointsLabel.swift */,
 				B45A622C1F0C6B3B00BA6DA2 /* Wall Generation */,
 				B45A62211F0C5B3E00BA6DA2 /* Constants.swift */,
 				B43DDE1C1F072ADC008483CC /* MLMovingGround.swift */,
@@ -311,6 +314,7 @@
 				B4FB090D1F0717C500909664 /* AppDelegate.swift in Sources */,
 				B45A622B1F0C6B3500BA6DA2 /* MLWall.swift in Sources */,
 				B45A62241F0C601D00BA6DA2 /* MLCloudGenerator.swift in Sources */,
+				B4038C611F137C8F0069A1BA /* MLPointsLabel.swift in Sources */,
 				B43DDE1D1F072ADC008483CC /* MLMovingGround.swift in Sources */,
 				B45A62221F0C5B3F00BA6DA2 /* Constants.swift in Sources */,
 			);

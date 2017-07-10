@@ -31,6 +31,10 @@ class MLCloudGenerator: SKSpriteNode {
         generationTimer = Timer.scheduledTimer(timeInterval: seconds, target: self, selector: #selector(MLCloudGenerator.generateCloud), userInfo: nil, repeats: true)
     }
     
+    func stopGenerating() {
+        generationTimer.invalidate()
+    }
+    
     func generateCloud() {
         let x = size.width/2 + CLOUD_WIDTH/2
         let y = CGFloat(arc4random_uniform(UInt32(size.height))) - size.height/2

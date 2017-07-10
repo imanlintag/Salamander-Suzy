@@ -15,7 +15,15 @@ class MLWall: SKSpriteNode {
         let size = CGSize(width: 30.0, height: 50.0)
         super.init(texture: nil, color: UIColor.black, size: size)
         
+        loadPhysicsBodyWithSize(size: size)
         startMoving()
+    }
+    
+    func loadPhysicsBodyWithSize(size: CGSize) {
+        physicsBody = SKPhysicsBody(rectangleOf: size)
+        physicsBody!.categoryBitMask = wallCategory
+        physicsBody!.collisionBitMask = wallCategory | heroCategory
+        physicsBody?.affectedByGravity = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,4 +35,7 @@ class MLWall: SKSpriteNode {
         run(SKAction.repeatForever(moveLeft))
     }
     
+    func stopMoving() {
+        removeAllActions()
+    }
 }

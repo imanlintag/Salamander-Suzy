@@ -22,6 +22,11 @@ class MLHero: SKSpriteNode {
         let size = CGSize(width:32, height:44)
         super.init(texture: nil, color: UIColor.clear, size: size)
         
+        loadAppearance()
+        loadPhysicsBodyWithSize(size: size)
+    }
+    
+    func loadAppearance() {
         body = SKSpriteNode(color: UIColor.black, size: CGSize(width: self.frame.size.width, height: 40))
         body.position = CGPoint(x: 0, y:2)
         addChild(body)
@@ -68,6 +73,14 @@ class MLHero: SKSpriteNode {
         rightFoot = leftFoot.copy() as! SKSpriteNode
         rightFoot.position.x = 8
         addChild(rightFoot)
+        }
+    
+    func loadPhysicsBodyWithSize(size: CGSize) {
+        physicsBody = SKPhysicsBody(rectangleOf: size)
+        physicsBody!.categoryBitMask = heroCategory
+        physicsBody!.collisionBitMask = wallCategory | heroCategory
+        physicsBody?.affectedByGravity = false
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -88,6 +101,14 @@ class MLHero: SKSpriteNode {
         
         run(translate)
         run(flip)
+    }
+    
+    func fall() {
+        physicsBody?.affectedByGravity = true
+        physicsBody?.applyImpulse(CGVector(dx: -5, dy: 30))
+        
+        let rotateBack = SKAction.rotate(byAngle: CGFloat(Double.pi) / 2, duration: 0.4)
+        run(rotateBack)
     }
     
     func startRunning() {
@@ -123,4 +144,6 @@ class MLHero: SKSpriteNode {
         leftFoot.removeAllActions()
         rightFoot.removeAllActions()
     }
+    
+    
 }
