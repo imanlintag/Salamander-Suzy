@@ -15,7 +15,6 @@ class MLHero: SKSpriteNode {
     var arm: SKSpriteNode!
     var leftFoot: SKSpriteNode!
     var rightFoot: SKSpriteNode!
-    
     var isUpsideDown = false
     
     init() {

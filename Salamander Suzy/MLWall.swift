@@ -24,6 +24,7 @@ class MLWall: SKSpriteNode {
         physicsBody!.categoryBitMask = wallCategory
         physicsBody!.collisionBitMask = wallCategory | heroCategory
         physicsBody?.affectedByGravity = false
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
