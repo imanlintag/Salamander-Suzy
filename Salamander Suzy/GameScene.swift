@@ -29,6 +29,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addTapToStartLabel()
         addPointsLabels()
         addPhysicsWorld()
+        loadHighScore()
         
     }
     
@@ -96,6 +97,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
     
+    func loadHighScore() {
+        let defaults = UserDefaults.standard
+        
+        let highscoreLabel = childNode(withName: "highscoreLabel") as! MLPointsLabel
+        highscoreLabel.setTo(defaults.integer(forKey: "highscore"))
+    }
+    
     // Mark: - Game Lifecycle
     func start() {
         isStarted = true
@@ -127,6 +135,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gameOverLabel.position.y = view!.center.y + 40
         addChild(gameOverLabel)
         gameOverLabel.run(blinkAnimation())
+        
+        // save current points label value
+        let pointsLabel = childNode(withName: "pointsLabel") as! MLPointsLabel
+        let highscoreLabel = childNode(withName: "highscoreLabel") as! MLPointsLabel
+        
+        if highscoreLabel.number < pointsLabel.number {
+            highscoreLabel.setTo(pointsLabel.number)
+            
+            let defaults = UserDefaults.standard
+            defaults.set(highscoreLabel.number, forKey: "highscore")
+        }
     }
     
     func restart() {
