@@ -74,10 +74,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func addPointsLabels() {
         let pointsLabel = MLPointsLabel(num: 0)
+        pointsLabel.name = "pointsLabel"
         pointsLabel.position = CGPoint(x: 20.0, y: view!.frame.size.height - 35)
         addChild(pointsLabel)
         
         let highscoreLabel = MLPointsLabel(num: 0)
+        highscoreLabel.name = "highscoreLabel"
         highscoreLabel.position = CGPoint(x:  view!.frame.size.width - 20, y: view!.frame.size.height - 35)
         addChild(highscoreLabel)
         
@@ -147,7 +149,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        
+        if wallGenerator.wallTrackers.count > 0 {
+            
+            let wall = wallGenerator.wallTrackers[0] as MLWall
+            
+            let wallLocation = wallGenerator.convert(wall.position, to: self)
+            if wallLocation.x < hero.position.x {
+                wallGenerator.wallTrackers.remove(at: 0)
+                
+                let pointsLabel = childNode(withName: "pointsLabel") as! MLPointsLabel
+                pointsLabel.increment()
+            }
+        }
+
     }
     
     // Mark: - SKPhysicsContactDelegate

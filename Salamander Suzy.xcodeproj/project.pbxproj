@@ -94,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4156D891F19DDAB0024E644 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				B4038C601F137C8F0069A1BA /* MLPointsLabel.swift */,
+			);
+			name = Labels;
+			sourceTree = "<group>";
+		};
 		B45A62271F0C60FB00BA6DA2 /* Cloud Generation */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +146,7 @@
 				B4FB090C1F0717C500909664 /* AppDelegate.swift */,
 				B4FB09101F0717C500909664 /* Actions.sks */,
 				B4FB09121F0717C500909664 /* GameScene.swift */,
-				B4038C601F137C8F0069A1BA /* MLPointsLabel.swift */,
+				B4156D891F19DDAB0024E644 /* Labels */,
 				B45A622C1F0C6B3B00BA6DA2 /* Wall Generation */,
 				B45A62211F0C5B3E00BA6DA2 /* Constants.swift */,
 				B43DDE1C1F072ADC008483CC /* MLMovingGround.swift */,

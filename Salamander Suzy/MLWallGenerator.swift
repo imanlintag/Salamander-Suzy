@@ -13,7 +13,7 @@ class MLWallGenerator: SKSpriteNode {
     
     var generationTimer: Timer?
     var walls = [MLWall]()
-    var wallTracker = [MLWall]()
+    var wallTrackers = [MLWall]()
     
     func startGeneratingWallsEvery(seconds: TimeInterval) {
         generationTimer = Timer.scheduledTimer(timeInterval: seconds, target: self, selector: #selector(MLWallGenerator.generateWall), userInfo: nil, repeats: true)
@@ -36,7 +36,7 @@ class MLWallGenerator: SKSpriteNode {
         wall.position.x = size.width/2 + wall.size.width/2
         wall.position.y = scale * (kMLGroundHeight/2 + wall.size.height/2)
         walls.append(wall)
-        wallTracker.append(wall)
+        wallTrackers.append(wall)
         addChild(wall)
     }
     
