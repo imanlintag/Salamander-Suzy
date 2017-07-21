@@ -19,6 +19,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var isStarted = false
     var isGameOver = false
     
+    var collision: UICollisionBehavior!
+    var wallCollision: UICollisionBehavior!
+    
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(red: 159.0/255.0, green: 201.0/255.0, blue: 244/255.0, alpha: 1.0)
         
@@ -186,6 +189,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Mark: - SKPhysicsContactDelegate
     func didBegin(_ contact: SKPhysicsContact) {
+        if !isGameOver {
+            gameOver()
+        }
+        print("did begin contact caller")
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
         if !isGameOver {
             gameOver()
         }

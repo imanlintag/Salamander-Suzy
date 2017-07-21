@@ -21,8 +21,7 @@ class MLWall: SKSpriteNode {
     
     func loadPhysicsBodyWithSize(size: CGSize) {
         physicsBody = SKPhysicsBody(rectangleOf: size)
-        physicsBody!.categoryBitMask = wallCategory
-        physicsBody!.collisionBitMask = wallCategory | heroCategory
+        physicsBody?.categoryBitMask = wallCategory
         physicsBody?.affectedByGravity = false
         
     }

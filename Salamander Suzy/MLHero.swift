@@ -76,8 +76,8 @@ class MLHero: SKSpriteNode {
     
     func loadPhysicsBodyWithSize(size: CGSize) {
         physicsBody = SKPhysicsBody(rectangleOf: size)
-        physicsBody!.categoryBitMask = heroCategory
-        physicsBody!.collisionBitMask = wallCategory | heroCategory
+        physicsBody?.categoryBitMask = heroCategory
+        physicsBody?.contactTestBitMask = wallCategory
         physicsBody?.affectedByGravity = false
 
     }
